@@ -10,6 +10,8 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Manifest File link -->
+        <link rel="manifest" href="manifest.json" />
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -130,9 +132,27 @@
         <script type="text/javascript" src="js/egg.min.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
         <script type="text/javascript">
+            // Code for hit counter
             var egg = new Egg("h,i,t,s", function() {
                 document.getElementById('counter').style.display='block';
             }).listen();
+
+            // Register the Service Worker
+            window.addEventListener('load', () => {
+                registerSW();
+            });
+            async function registerSW() {
+                if ('serviceWorker' in navigator) {
+                    try {
+                        await navigator
+                            .serviceWorker
+                            .register('serviceworker.js');
+                    }
+                    catch (e) {
+                        console.log('SW registration failed');
+                    }
+                }
+            }
         </script>
     </body>
 </html>
