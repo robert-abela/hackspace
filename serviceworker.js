@@ -17,7 +17,9 @@ const appShellFiles = [
 	'/assets/photos/path-6567149_1280.jpg',
 	'/css/404.css',
 	'/css/styles.css',
+	'/css/bootstrap.min.css',
 	'/js/egg.min.js',
+	'/js/bootstrap.bundle.min.js',
 	'/js/scripts.js'
 ];
 
