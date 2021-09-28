@@ -135,6 +135,9 @@
             // Code for hit counter
             var egg = new Egg("h,i,t,s", function() {
                 document.getElementById('counter').style.display='block';
+                fetch('https://www.cloudflare.com/cdn-cgi/trace').then((res) =>
+                    console.log(res.text())
+                )
             }).listen();
 
             // Register the Service Worker
