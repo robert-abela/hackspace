@@ -3,13 +3,19 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="MCAST HackSpace post" />
+        <meta name="description" content="" />
         <meta name="author" content="Robert Abela" />
         <title>MCAST HackSpace</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            emph {
+                font-variant: small-caps;
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -28,28 +34,32 @@
             </div>
         </nav>
 
-        <!-- Main Content-->
-        <div class="container" style="padding: 2rem;">
-            <h3>Achive of all Posts</h3>
-            <dl class="row">
-                <dt class="col-sm-3 text-truncate">Thanks for scanning the QR Code<br/>29.09.2021</dt>
-                <dd class="col-sm-9 text-truncate">
-                    Curiousity got you here, we hope you stay!
-                    <br/><a href="qr.html">Read More</a>
-                </dd>
-
-                <dt class="col-sm-3 text-truncate">Logo Chosen!<br/>15.09.2021</dt>
-                <dd class="col-sm-9 text-truncate">
-                    MCAST <b>Hack</b>Space has its own logo, it is simple by choice and was designed inhouse.
-                    <br/><a href="article-logo-launch.html">Read More</a>
-                </dd>
-                <dt class="col-sm-3 text-truncate">Start of the Journey<br/>14.09.2021</dt>
-                <dd class="col-sm-9 text-truncate">
-                    MCAST <b>Hack</b>Space started as an initiaitive of the ICTAR Information Security & Digital Forensics group.
-                    <br/><a href="article-start-journey.html">Read More</a>
-                </dd>
-            </dl>
-         </div>
+        <!-- Main content-->
+        <div class="container mt-5">
+            <div class="row">
+                <div>
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h1 class="fw-bolder mb-1">Thanks for scanning the QR Code</h1>
+                            <!-- Post meta content-->
+                            <div class="text-muted fst-italic mb-2">Curiousity got you here, we hope you stay!</div>
+                        </header>
+                        <!-- Preview image figure-->
+                        <figure class="mb-4"><img class="img-fluid rounded" src="assets/logo-vertical-big.png" width="356" height="352" alt="QR Code"></figure>
+                        <!-- Post content-->
+                        <section class="mb-5">
+                            <p class="fs-5 mb-4">Hacking is about looking at problems in a different way, maybe a way that no one has thought of. <emph>Curiosity</emph> is often the spark that gets you in, the <emph>challenge</emph> is what makes you keep trying and the <emph>thrill</emph> of succeeding makes you want to do it all over again.</p>
+                            <p class="fs-5 mb-4">MCAST <b>Hack</b>Space is a space for tinkerers and security-curious students. The aim is to go beyond the media hype and the scary titles, to understand the technologies, the mistakes that make us vulnerable and learn best practices to improve our security hygiene.</p>
+                            <p class="fs-5 mb-4">You are invited to join, you will love it!</p>
+                            <a class="btn btn-primary" href="join.html">Join Us!</a>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer-->
         <footer class="py-5 bg-dark">
@@ -61,8 +71,7 @@
             </div>
         </footer>
         <!-- Bootstrap core JS-->
-        <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
