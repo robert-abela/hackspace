@@ -5,3 +5,4 @@ https://hackspace.mcast.edu.mt/index.html
 https://hackspace.mcast.edu.mt/join.html
 https://hackspace.mcast.edu.mt/planned-sessions.html
 https://hackspace.mcast.edu.mt/qr.html
+https://hackspace.mcast.edu.mt/sponsors.html

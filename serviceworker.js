@@ -8,6 +8,7 @@ const appShellFiles = [
   '/join.html',
   '/planned-sessions.html',
   '/qr.html',
+  '/sponsors.html',
   '/assets/favicon.ico',
   '/assets/icon-192x192.png',
   '/assets/icon-512x512.png',
