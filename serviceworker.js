@@ -1,4 +1,4 @@
-const cacheName = 'HackSpacePWAv2021.10.01'
+const cacheName = 'HackSpacePWAv2021.10.02'
 const appShellFiles = [
   '/404.html',
   '/article-logo-launch.html',
