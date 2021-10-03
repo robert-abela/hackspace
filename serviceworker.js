@@ -1,5 +1,5 @@
-const cacheName = 'HackSpacePWAv2021.10.02'
-const appShellFiles = [
+const MAIN_CACHE = 'HackSpacePWAv2021.10.03'
+const CACHABLE_FILES = [
   '/404.html',
   '/article-logo-launch.html',
   '/article-start-journey.html',
@@ -30,14 +30,36 @@ self.addEventListener('install', function (event) {
 })
 
 async function cacheAllAssets() {
-  const cache = await caches.open(cacheName)
-  await cache.addAll(appShellFiles)
+  const cache = await caches.open(MAIN_CACHE)
+  await cache.addAll(CACHABLE_FILES)
 }
 
 self.addEventListener('fetch', function (event) {
   event.respondWith(
-    caches.match(event.request).then(function (response) {
-      return response || fetch(event.request)
-    })
+      // Network first
+      fetch(event.request).catch(function() {
+          return caches.match(event.request)
+      })
+      /* Cache first 
+      caches.match(event.request).then(function (response) {
+        return response || fetch(event.request)
+      })
+      */
   )
 })
+
+function clearOldCaches() {
+  caches.keys().then(cacheNames => {
+    return Promise.all(
+      cacheNames.map(cacheName => {
+        if (cacheName !== MAIN_CACHE) {
+          return caches.delete(cacheName);
+        }
+      })
+    );
+  })
+}
+
+self.addEventListener('activate', function (event) {
+  event.waitUntil(clearOldCaches())
+});
