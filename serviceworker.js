@@ -8,6 +8,7 @@ const CACHABLE_FILES = [
   '/planned-sessions.html',
   '/qr.html',
   '/sponsors.html',
+  '/manifest.json',
   '/assets/favicon.ico',
   '/assets/icon-192x192.png',
   '/assets/icon-512x512.png',
