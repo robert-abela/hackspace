@@ -1,6 +1,5 @@
-const MAIN_CACHE = 'HackSpacePWAv2021.10.03'
+const MAIN_CACHE = 'HackSpacePWAv2021.10.04'
 const CACHABLE_FILES = [
-  '/404.html',
   '/article-logo-launch.html',
   '/article-start-journey.html',
   '/articles-list.html',
@@ -17,7 +16,6 @@ const CACHABLE_FILES = [
   '/assets/logo-vertical-big.png',
   '/assets/photos/female-865110_1280.jpg',
   '/assets/photos/path-6567149_1280.jpg',
-  '/css/404.css',
   '/css/styles.css',
   '/css/bootstrap.min.css',
   '/js/egg.min.js',
