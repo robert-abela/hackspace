@@ -1,5 +1,6 @@
-const MAIN_CACHE = 'HackSpacePWAv2021.10.04'
+const MAIN_CACHE = 'HackSpacePWAv2021.10.13'
 const CACHABLE_FILES = [
+  '/article-freshers-week.html',
   '/article-logo-launch.html',
   '/article-start-journey.html',
   '/articles-list.html',
@@ -15,8 +16,13 @@ const CACHABLE_FILES = [
   '/assets/logo-horizontal-big.png',
   '/assets/logo-horizontal-med.png',
   '/assets/logo-vertical-big.png',
+  '/assets/photos/freshers1.jpg',
+  '/assets/photos/freshers2.jpg',
+  '/assets/photos/freshers3.jpg',
   '/assets/photos/female-865110_1280.jpg',
   '/assets/photos/path-6567149_1280.jpg',
+  '/assets/presentations/2021.10_freshers/online-ads.pdf',
+  '/assets/presentations/2021.10_freshers/strong-passwords.pdf',
   '/css/styles.css',
   '/css/bootstrap.min.css',
   '/js/egg.min.js',
