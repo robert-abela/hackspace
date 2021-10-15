@@ -10,7 +10,7 @@ const CACHABLE_FILES = [
   '/qr.html',
   '/sponsors.html',
   '/manifest.json',
-  '/assets/favicon.ico',
+  '/favicon.ico',
   '/assets/icon-192x192.png',
   '/assets/icon-512x512.png',
   '/assets/logo-horizontal-big.png',
