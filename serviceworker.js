@@ -1,5 +1,6 @@
-const MAIN_CACHE = 'HackSpacePWAv2021.10.13'
+const MAIN_CACHE = 'HackSpacePWAv2021.10.17'
 const CACHABLE_FILES = [
+  '/article-cyberroot.html',
   '/article-freshers-week.html',
   '/article-logo-launch.html',
   '/article-start-journey.html',
