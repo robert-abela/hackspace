@@ -16,6 +16,7 @@ const CACHABLE_FILES = [
   '/assets/logo-horizontal-big.png',
   '/assets/logo-horizontal-med.png',
   '/assets/logo-vertical-big.png',
+  '/assets/photos/Cyber-Root-RGB.png',
   '/assets/photos/freshers1.jpg',
   '/assets/photos/freshers2.jpg',
   '/assets/photos/freshers3.jpg',
