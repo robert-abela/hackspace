@@ -1,4 +1,4 @@
-const MAIN_CACHE = 'HackSpacePWAv2021.10.17'
+const MAIN_CACHE = 'HackSpacePWAv2021.10.20'
 const CACHABLE_FILES = [
   '/article-cyberroot.html',
   '/article-freshers-week.html',
@@ -17,6 +17,7 @@ const CACHABLE_FILES = [
   '/assets/logo-horizontal-big.png',
   '/assets/logo-horizontal-med.png',
   '/assets/logo-vertical-big.png',
+  'assets/ictsafull-406x144.png',
   '/assets/photos/Cyber-Root-RGB.png',
   '/assets/photos/freshers1.jpg',
   '/assets/photos/freshers2.jpg',
