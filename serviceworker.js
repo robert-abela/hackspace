@@ -1,9 +1,10 @@
-const MAIN_CACHE = 'HackSpacePWAv2021.10.20'
+const MAIN_CACHE = 'HackSpacePWAv2021.11.02'
 const CACHABLE_FILES = [
   '/article-cyberroot.html',
   '/article-freshers-week.html',
   '/article-logo-launch.html',
   '/article-start-journey.html',
+  '/article-personal-security-audits.html',
   '/articles-list.html',
   '/index.html',
   '/join.html',
@@ -24,6 +25,7 @@ const CACHABLE_FILES = [
   '/assets/photos/freshers3.jpg',
   '/assets/photos/female-865110_1280.jpg',
   '/assets/photos/path-6567149_1280.jpg',
+  '/assets/photos/surprised-pexels-nataliya-vaitkevich-6919748.jpg',
   '/assets/presentations/2021.10_freshers/online-ads.pdf',
   '/assets/presentations/2021.10_freshers/strong-passwords.pdf',
   '/css/styles.css',
