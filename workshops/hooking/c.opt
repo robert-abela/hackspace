@@ -1,0 +1,1 @@
+ -i "libpthread*!connect" /usr/bin/curl http://arkafort.robertabela.com

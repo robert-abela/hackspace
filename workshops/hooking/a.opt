@@ -1,0 +1,1 @@
+-i "libpthread*!recv" -i "libpthread*!send" /usr/bin/curl http://arkafort.robertabela.com

@@ -1,0 +1,1 @@
+ -i libpthread*!read -i libpthread*!write /usr/bin/curl https://arkafort.robertabela.com
