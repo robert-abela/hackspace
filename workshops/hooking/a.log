@@ -1,0 +1,51 @@
+Spawning `/usr/bin/curl http://arkafort.robertabela.com`...
+Instrumenting...
+recv: Loaded handler at "/home/student/frida/__handlers__/libpthread_2.31.so/recv.js"
+send: Loaded handler at "/home/student/frida/__handlers__/libpthread_2.31.so/send.js"
+Started tracing 2 functions. Press Ctrl+C to stop.
+<html>
+     <head>
+          <title>hello</title>
+     </head>
+     <body>
+            <h1>hello</h1>
+     </body>
+<html>
+
+           /* TID 0x29f2 */
+    59 ms  send(s=0xa, buf=[0x7fca5ae2cc5b], len=1[0x1]) [libpthread-2.31.so]
+    59 ms  7fca5ae2cc5b  01                                               .
+           /* TID 0x29e9 */
+    75 ms  send(s=0x9, buf=[0x55dac02b79a0], len=88[0x58]) [libpthread-2.31.so]
+    75 ms  55dac02b79a0  47 45 54 20 2f 20 48 54 54 50 2f 31 2e 31 0d 0a  GET / HTTP/1.1..
+55dac02b79b0  48 6f 73 74 3a 20 61 72 6b 61 66 6f 72 74 2e 72  Host: arkafort.r
+55dac02b79c0  6f 62 65 72 74 61 62 65 6c 61 2e 63 6f 6d 0d 0a  obertabela.com..
+55dac02b79d0  55 73 65 72 2d 41 67 65 6e 74 3a 20 63 75 72 6c  User-Agent: curl
+55dac02b79e0  2f 37 2e 36 38 2e 30 0d 0a 41 63 63 65 70 74 3a  /7.68.0..Accept:
+55dac02b79f0  20 2a 2f 2a 0d 0a 0d 0a                           */*....
+    90 ms  recv(s=0x9, buf=0x55dac02c1740, len=102400) => 374 [libpthread-2.31.so]
+    90 ms  55dac02c1740  48 54 54 50 2f 31 2e 31 20 32 30 30 20 4f 4b 0d  HTTP/1.1 200 OK.
+55dac02c1750  0a 44 61 74 65 3a 20 46 72 69 2c 20 31 32 20 4e  .Date: Fri, 12 N
+55dac02c1760  6f 76 20 32 30 32 31 20 32 33 3a 30 30 3a 35 33  ov 2021 23:00:53
+55dac02c1770  20 47 4d 54 0d 0a 53 65 72 76 65 72 3a 20 41 70   GMT..Server: Ap
+55dac02c1780  61 63 68 65 2f 32 2e 34 2e 34 31 20 28 55 62 75  ache/2.4.41 (Ubu
+55dac02c1790  6e 74 75 29 0d 0a 4c 61 73 74 2d 4d 6f 64 69 66  ntu)..Last-Modif
+55dac02c17a0  69 65 64 3a 20 57 65 64 2c 20 32 30 20 4f 63 74  ied: Wed, 20 Oct
+55dac02c17b0  20 32 30 32 31 20 31 38 3a 33 38 3a 30 36 20 47   2021 18:38:06 G
+55dac02c17c0  4d 54 0d 0a 45 54 61 67 3a 20 22 37 62 2d 35 63  MT..ETag: "7b-5c
+55dac02c17d0  65 63 64 31 34 33 62 65 64 62 30 22 0d 0a 41 63  ecd143bedb0"..Ac
+55dac02c17e0  63 65 70 74 2d 52 61 6e 67 65 73 3a 20 62 79 74  cept-Ranges: byt
+55dac02c17f0  65 73 0d 0a 43 6f 6e 74 65 6e 74 2d 4c 65 6e 67  es..Content-Leng
+55dac02c1800  74 68 3a 20 31 32 33 0d 0a 56 61 72 79 3a 20 41  th: 123..Vary: A
+55dac02c1810  63 63 65 70 74 2d 45 6e 63 6f 64 69 6e 67 0d 0a  ccept-Encoding..
+55dac02c1820  43 6f 6e 74 65 6e 74 2d 54 79 70 65 3a 20 74 65  Content-Type: te
+55dac02c1830  78 74 2f 68 74 6d 6c 0d 0a 0d 0a 3c 68 74 6d 6c  xt/html....<html
+55dac02c1840  3e 0a 20 20 20 20 20 3c 68 65 61 64 3e 0a 20 20  >.     <head>.  
+55dac02c1850  20 20 20 20 20 20 20 20 3c 74 69 74 6c 65 3e 68          <title>h
+55dac02c1860  65 6c 6c 6f 3c 2f 74 69 74 6c 65 3e 0a 20 20 20  ello</title>.   
+55dac02c1870  20 20 3c 2f 68 65 61 64 3e 0a 20 20 20 20 20 3c    </head>.     <
+55dac02c1880  62 6f 64 79 3e 0a 20 20 20 20 20 20 20 20 20 20  body>.          
+55dac02c1890  20 20 3c 68 31 3e 68 65 6c 6c 6f 3c 2f 68 31 3e    <h1>hello</h1>
+55dac02c18a0  0a 20 20 20 20 20 3c 2f 62 6f 64 79 3e 0a 3c 68  .     </body>.<h
+55dac02c18b0  74 6d 6c 3e 0a 0a                                tml>..
+Process terminated

@@ -1,0 +1,10 @@
+Spawning `/usr/bin/curl http://arkafort.robertabela.com`...
+Instrumenting...
+connect: Loaded handler at "/home/student/frida/__handlers__/libpthread_2.31.so/connect.js"
+Started tracing 1 function. Press Ctrl+C to stop.
+           /* TID 0x2b13 */
+    13 ms  connect(sockfd=0xb, addr=0x7f222268cdcc, addrlen=0x10) [libpthread-2.31.so]
+    13 ms  connect(sockfd=0xb, addr=0x7f222268cdcc, addrlen=0x10) [libpthread-2.31.so]
+    13 ms  connect(sockfd=0xb, addr=0x7f222268cdcc, addrlen=0x10) [libpthread-2.31.so]
+    13 ms  connect(sockfd=0xb, addr=0x7f222268cdcc, addrlen=0x10) [libpthread-2.31.so]
+Process terminated
