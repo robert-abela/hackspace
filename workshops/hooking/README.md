@@ -45,6 +45,14 @@ If we try the settings for Scenario A on a HTTPS website, we would not get any o
 ## Scenario C : Tricking curl
 Here we will be hooking the ```connect()``` function, and on leaving we will modify the return value to -1 so that curl thinks that the connection failed.
 
+## Running the scenarios
+To run the scenarios, simply call one of the following (for the respective scenario):
+```
+frida-trace -O a.opt
+frida-trace -O b.opt
+frida-trace -O c.opt
+```
+
 ## Functions reference
 - [ssize_t send(int sockfd, const void *buf, size_t len, int flags);](https://man7.org/linux/man-pages/man2/send.2.html)
 - [ssize_t recv(int sockfd, void *buf, size_t len, int flags);](https://man7.org/linux/man-pages/man2/recv.2.html)
