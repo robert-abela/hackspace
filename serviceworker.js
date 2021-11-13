@@ -20,6 +20,7 @@ const CACHABLE_FILES = [
   '/assets/logo-horizontal-med.png',
   '/assets/logo-vertical-big.png',
   'assets/ictsafull-406x144.png',
+  'assets/cyberfish_logo.png',
   '/assets/photos/Cyber-Root-RGB.png',
   '/assets/photos/sanjaysarma1.jpg',
   '/assets/photos/sanjaysarma2.jpg',
