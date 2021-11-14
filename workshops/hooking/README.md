@@ -53,6 +53,12 @@ frida-trace -O b.opt
 frida-trace -O c.opt
 ```
 
+## Practical research applications
+1. Hooking functions to capture (and modify) communication between application and the Internet/OS. One such application is to disable certificate validation to allow an app to connect to untrusted HTTPS and skip cert pinning. See: [MCAST dissertation by Angele Aquilina](https://fb.watch/9gtabNlVvI/) and [Defeating Android Certificate Pinning with Frida](https://httptoolkit.tech/blog/frida-certificate-pinning/).
+1. Dynamic analysis of malware, e.g. monitoring system calls originating from JS engines. See: [Casting exploit analysis as a Weird Machine reconstruction problem](https://arxiv.org/abs/2109.13100).
+1. Runtime Verification (RV) of secure applications such as chat apps or browsers using HTTPS. RV can be used to make sure that decrypted data is not leaked, checking that memory containing decryption keys is scrubbed before freeing buffers, etc. See: [RV-TEE: secure cryptographic protocol execution based on runtime verification](https://link.springer.com/article/10.1007%2Fs11416-021-00391-1) and [Secure Implementation of a
+Quantum-Future GAKE Protocol](http://staff.um.edu.mt/__data/assets/pdf_file/0006/479202/STM21.pdf).
+
 ## Functions reference
 - [ssize_t send(int sockfd, const void *buf, size_t len, int flags);](https://man7.org/linux/man-pages/man2/send.2.html)
 - [ssize_t recv(int sockfd, void *buf, size_t len, int flags);](https://man7.org/linux/man-pages/man2/recv.2.html)
