@@ -6,6 +6,7 @@ What is function hooking? It is a procedure that allows you to get notified when
 What is [frida](https://frida.re)? It is a dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers. We will use it to inject JavaScript into a native apps on Linux (curl) to allow us to explore it superficially but it can be used for [a **lot** more](https://www.youtube.com/watch?v=QC2jQI7GLus)!
 
 ## Clipper malware
+* [MalwareBytes Labs Analysis of Trojan.Clipper](https://blog.malwarebytes.com/detections/trojan-clipper/)
 * [The Malware That Swaps Your Address And Drains Your Wallet](https://medium.com/immunefi/the-malware-that-swaps-your-address-and-drains-your-wallet-552915fba542)
 * [Python implementation](https://github.com/NightfallGT/BTC-Clipper)
 
