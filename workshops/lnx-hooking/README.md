@@ -3,7 +3,7 @@
 ## Introduction
 What is function hooking? It is a procedure that allows you to get notified when a function has been called and/or is about to return. At that point you have the option to read the parameters, change variables, return a different value, etc. While having access to the code helps, you can hook OS calls even if you only have the compiled binary.
 
-What is [frida](https://frida.re)? It is a dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers. We will use it to inject JavaScript into a native apps on Linux (curl) to allow us to explore it superficially but it can be used for a **lot** more!
+What is [frida](https://frida.re)? It is a dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers. We will use it to inject JavaScript into a native apps on Linux (curl) to allow us to explore it superficially but it can be used for [a **lot** more](https://www.youtube.com/watch?v=QC2jQI7GLus)!
 
 What is [curl](https://curl.se/)? It is a command lines tool to transfer data. We will be using it to send a HTTP Request and get a HTTP Response but it can be used for a **lot** more!
 
@@ -65,3 +65,4 @@ Quantum-Future GAKE Protocol](http://staff.um.edu.mt/__data/assets/pdf_file/0006
 - [ssize_t read(int fd, void *buf, size_t count);](https://man7.org/linux/man-pages/man2/read.2.html)
 - [ssize_t write(int fd, const void *buf, size_t count);](https://man7.org/linux/man-pages/man2/write.2.html)
 - [int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen);](https://man7.org/linux/man-pages/man2/connect.2.html)
+
