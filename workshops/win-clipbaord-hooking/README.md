@@ -12,8 +12,8 @@ In this workshop we will replicate this behaviour using Frida and Notepad. It is
 ### Handlers
 All the handlers are under ```/__handlers__/USER32.dll```, where two functions will be hooked:
 
-- ```GetClipboardData()```: is called by a program to read the contents of the clipbaord, e.g. when the user pressed [Ctrl+V]. As soon as ```onLeave``` is triggered, the hook will check that the format of the clipboard content is ```CF_UNICODETEXT``` and that the text is a valid P2SH address. At this point the hook will replace the string content, which results in the fake address being pasted. The hook will not modify any other pasted string.
-- ```SetClipboardData()```: is called by a program to write contents to the clipbaord, e.g. when the user pressed [Ctrl+C] or [Ctrl+X]. Hooking it was not needed for this experiment, however it will be a way to demonstrate the potential of function hooking. As soon as ```onLeave``` is triggered, the hook will call ```OpenClipboard()```, ```EmptyClipboard()``` and ```CloseClipboard()``` in that order. This has the effect of undoing the Copy/Cut operation that just happened.
+- ```GetClipboardData()```: is called by a program to read the contents of the clipboard, e.g. when the user pressed [Ctrl+V]. As soon as ```onLeave``` is triggered, the hook will check that the format of the clipboard content is ```CF_UNICODETEXT``` and that the text is a valid P2SH address. At this point the hook will replace the string content, which results in the fake address being pasted. The hook will not modify any other pasted string.
+- ```SetClipboardData()```: is called by a program to write contents to the clipboard, e.g. when the user pressed [Ctrl+C] or [Ctrl+X]. Hooking it was not needed for this experiment, however it will be a way to demonstrate the potential of function hooking. As soon as ```onLeave``` is triggered, the hook will call ```OpenClipboard()```, ```EmptyClipboard()``` and ```CloseClipboard()``` in that order. This has the effect of undoing the Copy/Cut operation that just happened.
 
 ### Options
 The files named ```notepad.opt``` extension are the frida-trace command line options for our scenarios.
