@@ -24,7 +24,7 @@ Use the provided ```notapad.bat```.
 ## Injecting in a running process
 Up till now we are launching the Notepad process using ```frida-trace```. To make this a bit more realistic we can attach to an already running process, using process name (we will use this) or process id. Under under ```/Injection``` are two files:
 - ```Inject.js``` that is basically the Frida call to attach, hooks and helper functions.
-- ```notepad.py``` is a Python file that will look for ```notepad.exe```, injects the JavaScript and print out any output. 
+- ```notepad.py``` is a Python script that will look for ```notepad.exe```, inject the JavaScript and print out any output from the hooks.
 
 ### Running the scenario
 Launch an instance of Notapad and call 
