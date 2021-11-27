@@ -13,6 +13,7 @@
    * use "this" which is an object for keeping state local to an invocation.
    */
   onEnter(log, args, state) {
+    this.uFormat = args[0].toInt32();
   },
 
   /**
@@ -26,7 +27,8 @@
    * @param {object} state - Object allowing you to keep state across function calls.
    */
   onLeave(log, retval, state) {
-    log("[+] GetClipboardData() => " + retval);
+    log(`[+] GetClipboardData(${this.uFormat}) => ${retval}`);
+    log(`[+] GetClipboardData(${getClipboardFormatName(this.uFormat)}) => ${retval}`);
     if (!retval.isNull()) {
       var str = retval.readUtf16String();
       if (!str.startsWith("--"))

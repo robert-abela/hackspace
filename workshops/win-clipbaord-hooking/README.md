@@ -17,7 +17,7 @@ All the JS files are under ```/__handlers__``` directory. Since we will be using
 - onEnter(): triggered as soon as the hooked function is called. This allows you to know the sequence in which functions are called, the value of the parameters, etc.
 - onLeave(): triggered just before the hooked function returns. This allows you to check/change the return value, read buffers that were modified by the function, etc.
 
-### Running the scenarios
+### Running the scenario
 Use the provided ```notapad.bat```.
 
 ## Functions reference
