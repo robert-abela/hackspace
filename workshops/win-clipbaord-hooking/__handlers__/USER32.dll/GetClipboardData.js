@@ -18,7 +18,6 @@
 
   /**
    * Called synchronously when about to return from GetClipboardData.
-   *
    * See onEnter for details.
    *
    * @this {object} - Object allowing you to access state stored in onEnter.
