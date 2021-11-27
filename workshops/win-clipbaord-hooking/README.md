@@ -29,8 +29,7 @@ Up till now we are launching the Notepad process using ```frida-trace```. To mak
 ### Running the scenario
 Launch an instance of Notapad and call 
 ```
-cd Injection
-python notepad.py
+python Injection/notepad.py
 ```
 
 ## Functions reference
