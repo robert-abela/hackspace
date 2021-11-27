@@ -37,23 +37,15 @@
    * @param {object} state - Object allowing you to keep state across function calls.
    */
   onLeave(log, retval, state) {
-    const openClipboardAddr = Module.findExportByName('User32.dll', 'OpenClipboard');
-    const emptyClipboardAddr = Module.findExportByName('User32.dll', 'EmptyClipboard');
-    const closeClipboardAddr = Module.findExportByName('User32.dll', 'CloseClipboard');
+    /*log('[+] emptyClipboardCall() => ' + state.emptyClipboardCall);
+    log('[+] openClipboardCall() => ' + state.openClipboardCall);
+    log('[+] closeClipboardCall() => ' + state.closeClipboardCall);*/
 
-    const openClipboardCall = new NativeFunction(openClipboardAddr, 'int' /*BOOL*/, ['pointer' /*HWND*/]);
-    const emptyClipboardCall = new NativeFunction(emptyClipboardAddr, 'int' /*BOOL*/, []);
-    const closeClipboardCall = new NativeFunction(closeClipboardAddr, 'int' /*BOOL*/, []);
-    
-    /*log('[+] emptyClipboardCall() => ' + emptyClipboardCall);
-    log('[+] openClipboardCall() => ' + openClipboardCall);
-    log('[+] closeClipboardCall() => ' + closeClipboardCall);*/
-
-    boolRet = openClipboardCall(ptr('0x0'));
+    boolRet = state.openClipboardCall(ptr('0x0'));
     log('[+] openClipboard() => ' + boolRet);
-    boolRet = emptyClipboardCall();
+    boolRet = state.emptyClipboardCall();
     log('[+] emptyClipboard() => ' + boolRet);
-    boolRet = closeClipboardCall();
+    boolRet = state.closeClipboardCall();
     log('[+] closeClipboard() => ' + boolRet);
   }
 }

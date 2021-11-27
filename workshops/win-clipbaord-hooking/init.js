@@ -1,5 +1,5 @@
+//https://docs.microsoft.com/en-us/windows/win32/dataxchg/clipboard-formats
 function getClipboardFormatName(cf) {
-    //https://docs.microsoft.com/en-us/windows/win32/dataxchg/clipboard-formats
     switch(cf) {
         case 1: return 'CF_TEXT';
         case 2: return 'CF_BITMAP';
@@ -32,3 +32,11 @@ function getClipboardFormatName(cf) {
         default: return 'CF_UNKNOWN';
     }
 }
+
+const openClipboardAddr = Module.findExportByName('User32.dll', 'OpenClipboard');
+const emptyClipboardAddr = Module.findExportByName('User32.dll', 'EmptyClipboard');
+const closeClipboardAddr = Module.findExportByName('User32.dll', 'CloseClipboard');
+
+state.openClipboardCall = new NativeFunction(openClipboardAddr, 'int' /*BOOL*/, ['pointer' /*HWND*/]);
+state.emptyClipboardCall = new NativeFunction(emptyClipboardAddr, 'int' /*BOOL*/, []);
+state.closeClipboardCall = new NativeFunction(closeClipboardAddr, 'int' /*BOOL*/, []);
