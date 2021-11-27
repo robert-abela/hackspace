@@ -15,14 +15,10 @@
   onEnter(log, args, state) {
     this.uFormat = args[0].toInt32();
     this.hMem = args[1];
-    log(`[+] SetClipboardData(${this.uFormat}, ${this.hMem}) called`);
     log(`[+] SetClipboardData(${getClipboardFormatName(this.uFormat)}, ${this.hMem}) called`);
-    if (!args[1].isNull()) {
-      var str = args[1].readPointer().readUtf16String();
-      if (!str.startsWith("--"))
-        log("[+] Captured Data: " + str);
-      else
-        log("[+] Clipboard was cleared")
+    if (!this.hMem.isNull()) {
+      var str = this.hMem.readPointer().readUtf16String();
+      log("[+] Captured Data: " + str);
     }
   },
 

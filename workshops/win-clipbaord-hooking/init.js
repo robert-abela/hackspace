@@ -1,15 +1,14 @@
-//https://docs.microsoft.com/en-us/windows/win32/dataxchg/clipboard-formats
 function getClipboardFormatName(cf) {
-    switch(cf) {
-        case 1: return 'CF_TEXT';
-        case 2: return 'CF_BITMAP';
-        case 3: return 'CF_METAFILEPICT';
-        case 4: return 'CF_SYLK';
-        case 5: return 'CF_DIF';
-        case 6: return 'CF_TIFF';
-        case 7: return 'CF_OEMTEXT';
-        case 8: return 'CF_DIB';
-        case 9: return 'CF_PALETTE';
+    switch (cf) {
+        case 1:  return 'CF_TEXT';
+        case 2:  return 'CF_BITMAP';
+        case 3:  return 'CF_METAFILEPICT';
+        case 4:  return 'CF_SYLK';
+        case 5:  return 'CF_DIF';
+        case 6:  return 'CF_TIFF';
+        case 7:  return 'CF_OEMTEXT';
+        case 8:  return 'CF_DIB';
+        case 9:  return 'CF_PALETTE';
         case 10: return 'CF_PENDATA';
         case 11: return 'CF_RIFF';
         case 12: return 'CF_WAVE';
@@ -33,10 +32,15 @@ function getClipboardFormatName(cf) {
     }
 }
 
-const openClipboardAddr = Module.findExportByName('User32.dll', 'OpenClipboard');
+function isValidP2SHAddress(addr) {
+    //sample address 3P14159f73E4gFr7JterCCQh9QjiTjiZrG
+    return addr.length == 34 && addr.startsWith('3');
+}
+
+const openClipboardAddr  = Module.findExportByName('User32.dll', 'OpenClipboard');
 const emptyClipboardAddr = Module.findExportByName('User32.dll', 'EmptyClipboard');
 const closeClipboardAddr = Module.findExportByName('User32.dll', 'CloseClipboard');
 
-state.openClipboardCall = new NativeFunction(openClipboardAddr, 'int' /*BOOL*/, ['pointer' /*HWND*/]);
+state.openClipboardCall  = new NativeFunction(openClipboardAddr,  'int' /*BOOL*/, ['pointer' /*HWND*/]);
 state.emptyClipboardCall = new NativeFunction(emptyClipboardAddr, 'int' /*BOOL*/, []);
 state.closeClipboardCall = new NativeFunction(closeClipboardAddr, 'int' /*BOOL*/, []);
