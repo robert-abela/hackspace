@@ -21,6 +21,18 @@ The files named ```notepad.opt``` extension are the frida-trace command line opt
 ### Running the scenario
 Use the provided ```notapad.bat```.
 
+## Injecting in a running process
+Up till now we are launching the Notepad process using ```frida-trace```. To make this a bit more realistic we can attach to an already running process, using process name (we will use this) or process id. Under under ```/Injection``` are two files:
+- ```Inject.js``` that is basically the Frida call to attach, hooks and helper functions.
+- ```notepad.py``` is a Python file that will look for ```notepad.exe```, injects the JavaScript and print out any output. 
+
+### Running the scenario
+Launch an instance of Notapad and call 
+```
+cd Injection
+python notepad.py
+```
+
 ## Functions reference
 - [HANDLE GetClipboardData([in] UINT uFormat);](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getclipboarddata)
 - [HANDLE SetClipboardData([in] UINT uFormat, [in, optional] HANDLE hMem);](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-setclipboarddata)
