@@ -4,7 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Log4ShellDemo {
-	static Logger log = LogManager.getLogger("VulnerableHandler");
+	static Logger log = LogManager.getLogger("Log4ShellDemo");
 
 	public static void main(String[] args) {
 		log.error("Hello this is a debug message");
